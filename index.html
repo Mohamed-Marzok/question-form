@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Academix</title>
+    <link rel="icon" href="sohrtlogo.png" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="question-form">
+      <div class="form-container">
+        <img src="sohrtlogo.png" alt="logo" class="logo" />
+        <h2 class="form-header">Question Form</h2>
+        <div>
+          <label for="questionInput">Enter your question:</label>
+          <textarea id="questionInput" class="question-input"></textarea>
+        </div>
+        <div>
+          <label for="selectType">Select question type:</label>
+          <select id="selectType" class="question-type">
+            <option value="mcq">MCQ</option>
+            <option value="written">Written</option>
+          </select>
+        </div>
+        <!-- Options when selecting MCQ -->
+        <div id="mcqOptions" class="options">
+          <div>
+            <label for="choicesInput"
+              >Enter choices
+              <span class="highlight">(comma-separated)</span> :</label
+            >
+            <input type="text" id="choicesInput" class="choices-input" />
+          </div>
+          <div>
+            <label for="mcqCorrectAnswerInput">Enter correct answer:</label>
+            <input
+              type="text"
+              id="mcqCorrectAnswerInput"
+              class="correct-answer-input"
+            />
+          </div>
+          <div>
+            <label for="explanationInput">Enter explanation:</label>
+            <input
+              type="text"
+              id="explanationInput"
+              class="explanation-input"
+            />
+          </div>
+        </div>
+
+        <!-- Options when selecting Written -->
+        <div id="writtenOptions" class="options written-options">
+          <label for="writtenCorrectAnswerInput">Enter correct answer:</label>
+          <input
+            type="text"
+            id="writtenCorrectAnswerInput"
+            class="correct-answer-input"
+          />
+        </div>
+        <button class="add-btn">Add</button>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

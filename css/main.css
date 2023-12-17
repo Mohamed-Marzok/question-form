@@ -1,0 +1,134 @@
+/* start global rules */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+*:focus {
+  outline: none;
+}
+:root {
+  --main-color: #4721ad;
+  --2nd-color: #f13c3c;
+  --2nd-color-hover: #f43177;
+  --3rd-color: #f48c06;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.form-container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .form-container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .form-container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .form-container {
+    width: 1170px;
+  }
+}
+/* end global rules */
+.question-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 0 10px #ddd;
+  padding: 15px;
+  position: relative;
+}
+.question-form .logo {
+  width: 30px;
+  position: absolute;
+  top: calc(15px + (45px / 2));
+  transform: translateY(-50%);
+  right: 15px;
+}
+.form-header {
+  color: var(--main-color);
+}
+.form-container label {
+  font-size: 20px;
+  display: block;
+}
+.form-container .question-input {
+  height: 80px;
+  width: 100%;
+  resize: none;
+  overflow: auto;
+}
+.form-container .question-type {
+  height: 40px;
+  width: 100%;
+}
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.options input {
+  height: 40px;
+  width: 100%;
+}
+.form-container .question-input,
+.form-container .question-type,
+.options input {
+  box-shadow: 0 0 8px #ddd;
+  border: none;
+}
+.highlight {
+  color: var(--2nd-color);
+  font-weight: bold;
+}
+.add-btn {
+  width: 100px;
+  height: 40px;
+  align-self: flex-end;
+  margin-top: 20px;
+  border: none;
+  background-color: var(--2nd-color);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+.add-btn:hover {
+  background-color: var(--2nd-color-hover);
+}
+.written-options {
+  display: none;
+}
